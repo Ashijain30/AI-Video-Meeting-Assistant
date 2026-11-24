@@ -1,6 +1,2 @@
 ffmpeg
-<<<<<<< HEAD
 nodejs
-=======
-deno
->>>>>>> ca8abe12b2460bf34e4835f07269559e62a169aa

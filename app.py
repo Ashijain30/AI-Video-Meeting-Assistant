@@ -227,6 +227,10 @@ if analyze:
         try:
             set_step("audio", "active")
             status.info("🔊 Processing audio...")
+            st.write("DEBUG INPUT MODE:", input_mode)
+            st.write("DEBUG SOURCE:", repr(source))
+            st.write("DEBUG IS URL:", source.startswith(("http://", "https://")))
+
             chunks = process_input(source)
             set_step("audio", "done")
             progress.progress(15)
@@ -458,7 +462,3 @@ else:
         &nbsp; <span class="badge green">RAG CHAT</span>
     </div>
     """, unsafe_allow_html=True)
-    
-st.write("DEBUG INPUT MODE:", input_mode)
-st.write("DEBUG SOURCE:", repr(source))
-st.write("DEBUG IS URL:", source.startswith(("http://", "https://")))

@@ -5,7 +5,8 @@
 # ============================================================
 
 # Audio / Video Acquisition
-yt-dlp==2026.10.26
+
+yt-dlp[default]==2026.10.26
 pydub
 ffmpeg-python
 

@@ -70,6 +70,10 @@ def download_youtube_audio(url: str) -> str:
 
     # Detect Node.js for YouTube JavaScript challenges
     node_path = shutil.which("node")
+    if node_path:
+               ydl_opts["js_runtimes"] = {
+              "node": {"path": node_path}
+    }
 
     ydl_opts = {
         "format": "bestaudio/best",

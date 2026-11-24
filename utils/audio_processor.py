@@ -134,21 +134,27 @@ def chunk_audio(wav_path: str, chunk_minutes: int = 10) -> list:
 
 def process_input(source: str) -> list:
 
-    if source.startswith(("http://", "https://")):
+    print("========== MEETMIND DEBUG ==========")
+    print("SOURCE:", repr(source))
 
-        print("Detected YouTube URL.")
+    if source.startswith(("http://", "https://")):
+        print("INPUT TYPE: URL")
 
         downloaded_wav = download_youtube_audio(source)
         wav_path = convert_to_wav(downloaded_wav)
 
     else:
+        print("INPUT TYPE: LOCAL FILE")
+        print("FILE EXISTS:", os.path.exists(source))
 
-        print("Detected local file.")
+        if not os.path.exists(source):
+            raise FileNotFoundError(f"Uploaded file not found: {source}")
 
         wav_path = convert_to_wav(source)
 
     chunks = chunk_audio(wav_path)
 
-    print(f"Audio ready — {len(chunks)} chunk(s) created.")
+    print("CHUNKS CREATED:", len(chunks))
+    print("===================================")
 
     return chunks

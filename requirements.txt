@@ -5,7 +5,7 @@
 # ============================================================
 
 # Audio / Video Acquisition
-yt-dlp
+yt-dlp[default]
 pydub
 ffmpeg-python
 

@@ -1,0 +1,51 @@
+
+# ============================================================
+# AI MEETING ASSISTANT
+# Python 3.11 or 3.12 recommended
+# ============================================================
+
+# Audio / Video Acquisition
+yt-dlp
+pydub
+ffmpeg-python
+
+# Speech-to-Text — Local Whisper
+openai-whisper
+torch
+torchaudio
+
+# Translation — Hindi to English
+deep-translator
+
+# LLM Orchestration — Mistral AI
+langchain
+langchain-core
+langchain-community
+langchain-mistralai
+langchain-groq
+
+langchain-text-splitters
+mistralai
+
+# RAG Pipeline
+chromadb
+sentence-transformers
+langchain-huggingface
+huggingface-hub
+tiktoken
+
+# Streamlit UI
+streamlit
+streamlit-extras
+watchdog
+
+# PDF & TXT Export
+reportlab
+fpdf2
+
+# Utilities
+python-dotenv
+numpy
+tqdm
+requests
+langchain-chroma
